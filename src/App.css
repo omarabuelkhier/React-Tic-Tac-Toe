@@ -42,10 +42,40 @@
   
   .status {
     position: absolute;
-    top: 10%;
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
     font-size: 24px;
     font-weight: bold;
     color: #504f4f;
   }
+  .header {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Use a sans-serif font for better readability */
+    text-align: center;
+    color: #5f5f5f;
+  }
+  .winner {
+    color: #28a745; /* Green for winner */
+  }
+  .draw {
+    color: #dc3545; /* Red for draw */
+  }
+  .reset-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  .status {
+    font-family: 'Arial', sans-serif; /* Use a sans-serif font for better readability */
+  }
+  .squares:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+  } 

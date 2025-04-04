@@ -21,8 +21,6 @@ export default function Board() {
   let status;
   if (winner) {
     status = "Winner: " + winner;
-  } else {
-    status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
   for (let x = 0; x < 3; x++) {
@@ -51,7 +49,15 @@ export default function Board() {
   return (
     <>
       <div className="board">
-        <div className="status">{status}</div>
+        <div className="header">
+        <h1>Tic Tac Toe</h1>
+        <h2>React + TypeScript</h2>
+        <h3>By Omar Abuelkhier</h3>
+        </div>
+        <div className="status">
+          <h2>{status}</h2>
+          <h3>Current Player: {xIsNext ? "X" : "O"}</h3>
+        </div>
         {table}
       </div>
       <button className="reset-button" onClick={() => setSquares(Array(9).fill(null))}>
