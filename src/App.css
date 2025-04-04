@@ -1,0 +1,51 @@
+/* App.css */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Create a 3x3 grid */
+    grid-gap: 5px; /* Add spacing between squares */
+    justify-content: center; /* Center the board horizontally */
+    margin-top: 50px; /* Add some space from the top */
+  }
+  
+  .squares {
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    color:#5f5f5f;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    background-color: #fff; /* Ensure a consistent background color */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .winning-square {
+    background-color: rgba(255, 0, 0, 0.5); /* Highlight winning squares */
+  }
+  
+  .reset-button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .status {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #504f4f;
+  }
