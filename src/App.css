@@ -10,6 +10,7 @@
   .squares {
     width: 100px;
     height: 100px;
+    margin-bottom: 5% !important; /* Ensure squares are centered */
     font-size: 24px;
     color:#5f5f5f;
     border: 1px solid #000;
