@@ -28,7 +28,7 @@
   
   .reset-button {
     position: absolute;
-    top: 90%;
+    top: 98%;
     left: 50%;
     transform: translateX(-50%);
     border: 1px solid #ccc;

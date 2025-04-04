@@ -19,8 +19,14 @@ export default function Board() {
   const table: JSX.Element[] = [];
   const { winner, winningLine } = calculateWinner(squares);
   let status;
-  if (winner) {
+  if (winner!=="Draw") {
+    if(winner){
     status = "Winner: " + winner;
+    }else{
+    status = "Next Player: " + (xIsNext? "O" : "X");
+    }
+  }else if(winner === "Draw"){
+    status = "It's a Draw!";
   }
 
   for (let x = 0; x < 3; x++) {
@@ -96,6 +102,11 @@ function calculateWinner(squares: (string | null)[]) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return { winner: squares[a], winningLine: lines[i] }; // Return the winner and the winning line
+    }else{
+      // Check for draw condition
+      if (squares.every((square) => square !== null)) {
+        return { winner: "Draw", winningLine: null }; // Return "Draw" if all squares are filled
+      }
     }
   }
   return { winner: null, winningLine: null };
